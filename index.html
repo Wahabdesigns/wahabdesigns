@@ -1,87 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WahabDesigns - Logo Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wahab Designs</title>
 
-<style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #0f172a;
-    color: white;
-    text-align: center;
-}
-header {
-    padding: 40px;
-    background: #020617;
-}
-h1 {
-    margin: 0;
-    font-size: 40px;
-}
-p {
-    color: #cbd5e1;
-}
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-}
-.gallery img {
-    width: 250px;
-    margin: 10px;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-.gallery img:hover {
-    transform: scale(1.05);
-}
-.btn {
-    display: inline-block;
-    margin: 20px;
-    padding: 12px 25px;
-    background: #22c55e;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-}
-footer {
-    margin-top: 40px;
-    padding: 20px;
-    background: #020617;
-}
-</style>
+  <!-- Brittney font -->
+  <link href="https://fonts.googleapis.com/css2?family=Brittney&display=swap" rel="stylesheet">
 
+  <style>
+    /* Reset & body */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { display: flex; min-height: 100vh; }
+
+    /* Left panel */
+    .left-panel {
+      width: 250px;
+      background-color: #f5f5f5; /* light grey */
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-right: 1px solid #ddd;
+    }
+
+    .left-panel h1 {
+      font-family: 'Brittney', cursive;
+      font-size: 2.5em;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .left-panel p {
+      font-size: 0.9em;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    /* Right content */
+    .right-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    section {
+      padding: 50px 40px;
+    }
+
+    /* Section colors */
+    #images { background-color: #e8f0fe; }   /* light blue */
+    #templates { background-color: #fff4e5; } /* light peach */
+    #videos { background-color: #e6ffe6; }    /* light green */
+
+    section h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #333;
+      text-align: center;
+    }
+
+    /* Image gallery */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover { transform: scale(1.05); }
+
+    /* Templates */
+    .templates-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .template-item {
+      width: 250px;
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    /* Videos */
+    .videos-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .videos-list iframe {
+      width: 320px;
+      height: 180px;
+      border-radius: 10px;
+    }
+
+    /* Footer / optional */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f5f5f5;
+      font-size: 0.9em;
+      color: #555;
+      border-top: 1px solid #ddd;
+    }
+
+    /* Responsive */
+    @media(max-width: 900px) {
+      body { flex-direction: column; }
+      .left-panel { width: 100%; flex-direction: row; justify-content: space-around; border-right: none; border-bottom: 1px solid #ddd; padding: 20px; }
+    }
+  </style>
 </head>
 <body>
 
-<header>
-    <h1>WahabDesigns</h1>
-    <p>Professional Logo Designer | Creative & Modern Designs</p>
-</header>
+  <!-- Left Panel -->
+  <div class="left-panel">
+    <h1>Wahab Designs</h1>
+    <p>Professional Logo Designer<br>Creative and Modern Designs</p>
+  </div>
 
-<section>
-    <h2>My Logo Portfolio</h2>
-    <div class="gallery">
-        <img src="logo1.jpg">
-        <img src="logo2.jpg">
-        <img src="logo3.jpg">
-        <img src="logo4.jpg">
-    </div>
-</section>
+  <!-- Right Content -->
+  <div class="right-content">
 
-<section>
-    <h2>Hire Me</h2>
-    <p>Click below to order your logo</p>
-    <a href="#" class="btn">Order on Fiverr</a>
-</section>
+    <!-- Images Section -->
+    <section id="images">
+      <h2>Images</h2>
+      <div class="gallery">
+        <img src="logo1.jpg" alt="Logo 1">
+        <img src="logo2.jpg" alt="Logo 2">
+        <img src="logo3.jpg" alt="Logo 3">
+      </div>
+    </section>
 
-<footer>
-    <p>©️ 2026 WahabDesigns | All Rights Reserved</p>
-</footer>
+    <!-- Templates Section -->
+    <section id="templates">
+      <h2>Templates</h2>
+      <div class="templates-list">
+        <div class="template-item">Template 1</div>
+        <div class="template-item">Template 2</div>
+        <div class="template-item">Template 3</div>
+      </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section id="videos">
+      <h2>Videos</h2>
+      <div class="videos-list">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/3GwjfUFyY6M" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2026 Wahab Designs | All rights reserved
+  </footer>
 
 </body>
 </html>
